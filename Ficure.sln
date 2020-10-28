@@ -11,12 +11,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{48717416-A4E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{5060503F-FF81-485A-BFEE-BF9D14E7955D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.API", "Transaction.API\Transaction.API.csproj", "{EB3FE1C7-FA1B-4FAB-A781-EFC4224CF6D4}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB3FE1C7-FA1B-4FAB-A781-EFC4224CF6D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3FE1C7-FA1B-4FAB-A781-EFC4224CF6D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3FE1C7-FA1B-4FAB-A781-EFC4224CF6D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3FE1C7-FA1B-4FAB-A781-EFC4224CF6D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5E65C2A5-3819-4C4E-8564-AB6DBA601D56} = {245B9B69-4FA8-40B6-8307-C9E49579D6F5}
+		{EB3FE1C7-FA1B-4FAB-A781-EFC4224CF6D4} = {5E65C2A5-3819-4C4E-8564-AB6DBA601D56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEC4EC98-52B0-4FF8-8FA6-F6CBA69C25F5}
