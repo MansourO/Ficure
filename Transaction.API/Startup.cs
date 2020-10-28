@@ -52,7 +52,7 @@ namespace Transaction.API
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transaction API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transaction API V1");
             });
 
             app.UseHttpsRedirection();
