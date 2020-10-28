@@ -7,7 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{24
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transaction", "Transaction", "{5E65C2A5-3819-4C4E-8564-AB6DBA601D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction.API", "Transaction.API\Transaction.API.csproj", "{D74C9582-BFC4-4ABF-95CA-66E1CB019C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transaction.API", "Transaction.API\Transaction.API.csproj", "{D74C9582-BFC4-4ABF-95CA-66E1CB019C97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{48717416-A4ED-405B-B7B1-80BDE92505F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{5060503F-FF81-485A-BFEE-BF9D14E7955D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
