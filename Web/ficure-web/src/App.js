@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from './components/Test';
+import TransactionList from './components/Transactions/TransactionList';
 
 const jsx = (
-    <Test />
+    <TransactionList />
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));

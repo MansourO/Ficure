@@ -55,6 +55,13 @@ namespace Transaction.API
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transaction API V1");
             });
 
+            app.UseCors(builder => builder
+                .WithOrigins("http://localhost:8080")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+            );
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
