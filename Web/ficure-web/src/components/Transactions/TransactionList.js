@@ -4,15 +4,10 @@ import axios from 'axios';
 
 const columns = [
   { field: 'id', headerName: 'Id', width: 130 },
+  { field: 'userId', headerName: 'UserId', width: 130 },
   { field: 'name', headerName: 'Name', width: 130 },
   { field: 'amount', headerName: 'Amount', width: 130 }
 ];
-
-const rows = [
-  { id:'1', name: 'Test 4', amount: 120},
-  { id:'2', name: 'Test 3', amount: 150 }
-];
-
 
 export default class TransactionList extends React.Component {
   state = {
@@ -31,20 +26,18 @@ export default class TransactionList extends React.Component {
       this.setState({ 
         transactions: transactions 
       });
+
+      console.log(this.state.transactions);
     })
   }
 
   render() {
     return (
       <ul>
-          {/* <h1>Test</h1>
-          { this.state.transactions.map(transaction => 
-            <li>{transaction.name}</li>)} */}
-
-        <div style={{ height: 400, width: '100%' }}>
-           <DataGrid columns={columns} {...this.transactions} />
-           {/* <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection /> */}
-       </div>
+        {<h1>Transactions</h1>}
+         <div style={{ height: 400, width: '100%' }}>
+           <DataGrid columns={columns} rows={this.state.transactions} />
+        </div> 
       </ul>
     )
   }

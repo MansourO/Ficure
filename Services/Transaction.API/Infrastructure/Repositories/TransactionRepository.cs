@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swashbuckle.AspNetCore.SwaggerGen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,29 +16,31 @@ namespace Transaction.API.Infrastructure.Repositories
     {
         public IEnumerable<UserTransaction> GetTransactions(Guid UserId)
         {
-            //TODO: Refactor into service layer
             var userId = new Guid("79e814c5-31e8-4a91-8c97-8c57cfccbc33");
             var userId2 = new Guid("c75fdddf-183b-493b-a77f-d0cb7817ec2e");
 
-            var mockTransactions =  new List<UserTransaction>()
+            var mockTransactions = new List<UserTransaction>()
             {
                 new UserTransaction()
                 {
+                    Id = 1,
                     UserId = userId,
                     Name = "Test 1",
                     Amount = -10m
                 },
                 new UserTransaction()
                 {
+                    Id = 2,
                     UserId = userId,
                     Name = "Test 2",
                     Amount = 25m
                 },
                  new UserTransaction()
                 {
+                    Id = 3,
                     UserId = userId2,
                     Name = "Test 2",
-                    Amount = 25m
+                    Amount = 55m
                 }
             };
 
