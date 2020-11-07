@@ -30,8 +30,6 @@ namespace Transaction.API
             services.AddTransient<ITransactionRepository, MockTransactionRepository>();
 
             //Integration Setups
-
-
             services.AddSwaggerGen();
 
             services.AddControllers();
