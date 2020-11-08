@@ -1,7 +1,7 @@
 FROM node:13.1-alpine as build
 
 WORKDIR /usr/src/app
-COPY Web/ficure-web/package*.json ./
+COPY Web/ficure-web/package.json ./
 RUN yarn cache clean && yarn --update-checksums
 COPY . ./
 RUN yarn && yarn build
