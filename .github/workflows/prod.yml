@@ -22,5 +22,5 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: omansour23/fycure-transaction-api
-        dockerfile: Services/Transaction.API/Dockerfile
+        dockerfile: Dockerfile
         tags: latest
