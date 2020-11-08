@@ -2,6 +2,7 @@ FROM node:13.1-alpine
 
 WORKDIR /usr/src/app
 COPY Web/fycure-web/package.json ./
+RUN yarn install --ignore-engines
 RUN yarn cache clean && yarn --update-checksums
 COPY . ./
 EXPOSE 3000
