@@ -9,7 +9,7 @@ COPY Services/Transaction.API/Transaction.API.csproj ./
 RUN dotnet restore Services/Transaction.API/Transaction.API.csproj
 
 #Dotnet Publish
-COPY . ./
+COPY Services/Transaction.API/Transaction.API.csproj ./
 RUN dotnet publish -c Release -o out
 
 #Build Image
