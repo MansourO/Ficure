@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
-WORKDIR /app
+WORKDIR /Services/Transaction.API
 
 # Copy csproj and restore as distinct layers
-COPY Services/Transaction.API/Transaction.API.csproj ./
+COPY *.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
