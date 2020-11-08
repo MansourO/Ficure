@@ -8,7 +8,7 @@ COPY Web/fycure-web/package.json /src/app/
 RUN npm install
 RUN npm install react-scripts -g
 
-COPY . /src/app
+COPY Web/fycure-web /src/app
 RUN npm run build
 
 FROM nginx:1.13.12-alpine
