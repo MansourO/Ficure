@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "engines": {
-    "yarn": "^0.13.0"
+    "yarn": "1.19.1"
   },
   "author": "Osama Mansour",
   "license": "MIT",
