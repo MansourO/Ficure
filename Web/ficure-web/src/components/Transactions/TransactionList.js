@@ -15,7 +15,7 @@ export default class TransactionList extends React.Component {
   }
 
   componentDidMount(){
-    axios.get(`https://localhost:44377/api/UserTransaction/GetTransactions`, 
+    axios.get(`http://67.207.88.255:8080/api/UserTransaction/GetTransactions`, 
     {
       params: {
         UserId: '79e814c5-31e8-4a91-8c97-8c57cfccbc33'
