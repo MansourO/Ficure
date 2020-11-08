@@ -1,12 +1,11 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /Services/Transaction.API
 
-# Copy csproj and restore as distinct layers
-COPY Transaction.API.csproj ./
-RUN dotnet restore
+COPY ["Services/Transaction.API/Transaction.API.csproj", "Services/Transaction.API/"]
 
-# Copy everything else and build
-COPY . ./
+# Copy csproj and restore as distinct layers
+COPY Services/Transaction.API/Transaction.API.csproj ./
+RUN dotnet restore Services/Transaction.API/Transaction.API.csproj
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
