@@ -23,8 +23,6 @@ jobs:
         repository: omansour23/fycure-transaction-api
         dockerfile: Services/Transaction.API/Dockerfile
         tags: latest
-
-jobs:
   build-and-deploy-fycure-web:
     name: Build and Deploy Fycure Web
     runs-on: ubuntu-latest
