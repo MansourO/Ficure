@@ -1,14 +1,21 @@
-FROM node:13.1-alpine
+FROM node:latest
+RUN mkdir -p /src/app/
 
-WORKDIR /usr/src/app
-COPY Web/fycure-web/package.json ./
-RUN yarn install --ignore-engines
-RUN yarn cache clean && yarn --update-checksums
-COPY . ./
-EXPOSE 3000
-CMD ["yarn", "start"]
+WORKDIR /src/app
+ENV PATH /src/app/node_modules/.bin:$PATH
 
-FROM nginx:1.17-alpine
-COPY --from=build /usr/src/app/build /usr/share/nginx/html
+COPY package.json /src/app/
+
+RUN npm install
+RUN npm install react-scripts -g
+
+ADD src /src/app/src
+ADD public /src/app/public
+
+COPY . /src/app
+RUN npm run build
+
+FROM nginx:1.13.12-alpine
+COPY --from=build /src/app/build /share/nginx/html
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]`
