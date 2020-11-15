@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:latest as build
 RUN mkdir -p /src/app/
 
 WORKDIR /src/app
